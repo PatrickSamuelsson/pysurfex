@@ -680,6 +680,9 @@ class ConfigurationFromHarmonie(Configuration):
         elif soil_texture == "SOILGRID":
             ysand = "SAND_SOILGRID"
             yclay = "CLAY_SOILGRID"
+        elif soil_texture == "SOILGRID_v2":
+            ysand = "sand_0-200cm_mean_int"
+            yclay = "clay_0-200cm_mean_int"
         else:
             raise NotImplementedError
         self.update_setting("SURFEX#ISBA#YSAND", ysand + ".dir")
